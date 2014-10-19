@@ -1,5 +1,5 @@
 
-object Hello extends app {
+object Hello extends App {
     println("hello, Git!")
 }
 
