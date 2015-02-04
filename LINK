@@ -1,6 +1,26 @@
 
+
+
+yarn：
+http://tech.uc.cn/?p=1438
+http://www.ibm.com/developerworks/cn/opensource/os-cn-hadoop-yarn/
+
+hadoop各个组件调优：
+http://wangneng-168.iteye.com/blog/2067741
+
+spark 分析：
+http://blog.csdn.net/u014388509/article/category/2145257
+http://blog.csdn.net/pelick/article/details/41866845
+http://tech.uc.cn/?p=2116
+例子：
+http://www.cnblogs.com/byrhuangqiang/p/4017725.html
 hhttp://dongxicheng.org/framework-on-yarn/spark-scala-writing-application/
-ttp://my.oschina.net/HeliosFly/blog/356517
+
+mlib
+rdc.taobao.org/?p=2163
+
+java class 分析
+http://my.oschina.net/HeliosFly/blog/356517
 
 shell 字符串操作
 http://www.cnblogs.com/chengmo/archive/2010/10/02/1841355.html
