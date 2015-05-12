@@ -1,40 +1,4 @@
 
-batch gradient descent code(also stochastic):
-1.这个是按照公式求的，最后求的是loss（cost）fuction值。注意是h-y
-http://daweibalong.iteye.com/blog/1660169
-2.这个博主的是错的，楼11是对的。区别1，这个是用中间缓存了theta，比1，少一层循环。
-http://blog.csdn.net/pennyliang/article/details/6998517
-
-for(int i = 0; i < 1000 && loss > 0.0001; ++i) 
-{ 
-	float error = 0.0; 
-	float cost[2] = {0.0, 0.0};
-
-	for(int j = 0; j < 4; ++j) 
-	{ 
-		float h = 0.0; 
-		for(int k = 0; k < 2; ++k) 
-		{ 
-			h += matrix[j][k] * theta[k]; 
-		} 
-		error = result[j] - h;      //这是 y-h，所以下面更新theta时是 + ！
-
-		for(int k = 0; k < 2; ++k) 
-		{ 
-			cost[k] += error * matrix[j][k];
-		} 
-	}
-
-	for(int k = 0; k < 2; ++k) 
-	{ 
-		theta[k] += learning_rate * cost[k]/4; // wi = wi + 1/m * sum((yi-hi)xj)
-	}
-}
-
-3.python scikit-learning 应用！
-http://www.bogotobogo.com/python/python_numpy_batch_gradient_descent_algorithm.php
-
-
 ML class & note pdf:
 http://cs229.stanford.edu/materials.html
 
