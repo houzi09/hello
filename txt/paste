@@ -1,3 +1,4 @@
+env:  6 cores, 16 pc, 64GB/pc
 
 5 cores per executor
 – For max HDFS throughput
@@ -8,3 +9,15 @@ Hadoop/Yarn daemon cores)
 • Each node has 3 executors
 • 63 GB/3 = 21 GB, 21 x (1-0.07) ~ 19 GB (counting off
 heap overhead)
+
+
+exception:
+15/04/16 14:13:03 WARN scheduler.TaskSetManager: Lost task 19.0 in
+stage 6.0 (TID 120, 10.215.149.47):
+java.lang.IllegalArgumentException: Size exceeds Integer.MAX_VALUE
+at sun.nio.ch.FileChannelImpl.map(FileChannelImpl.java:828) at
+org.apache.spark.storage.DiskStore.getBytes(DiskStore.scala:123) at ....
+
+because:
+No Spark shuffle block can be greater than 2 GB
+Rule of thumb is around 128 MB per partition
